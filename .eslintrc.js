@@ -5,9 +5,7 @@ module.exports = {
   },
   extends: [
     'standard-with-typescript',
-    'eslint:recommended',
-    'plugin:@typescript-eslint/recommended',
-    'plugin:prettier/recommended'
+    'plugin:@typescript-eslint/recommended'
   ],
   overrides: [
     {
@@ -21,11 +19,8 @@ module.exports = {
     }
   ],
   parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    parser: '@typescript-eslint/parser',
-    project: './tsconfig.json',
-    tsconfigRootDir: __dirname
+    ecmaVersion: 'ES2021',
+    sourceType: 'module'
   },
   rules: { '@typescript-eslint/strict-boolean-expressions': 0 }
-};
+}
