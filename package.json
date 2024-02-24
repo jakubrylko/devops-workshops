@@ -4,9 +4,9 @@
   "main": "index.js",
   "scripts": {
     "lint": "eslint . --fix",
+    "prepare": "husky",
     "prettier": "prettier . --write",
-    "type:check": "tsc && :",
-    "prepare": "husky"
+    "type:check": "tsc && :"
   },
   "author": "Jakub Ryłko <jrylko@apptension.com>",
   "license": "ISC",
