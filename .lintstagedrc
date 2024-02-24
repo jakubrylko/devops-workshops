@@ -1,0 +1,3 @@
+{
+  "*.ts": ["yarn lint", "yarn prettier", "yarn type:check"]
+}

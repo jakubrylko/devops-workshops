@@ -1,0 +1,3 @@
+echo "Running pre-commit tasks"
+yarn lint-staged
+echo "Finishing pre-commit tasks"
