@@ -3,9 +3,8 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "lint": "eslint . --fix",
+    "lint": "eslint . --fix && prettier . --write",
     "prepare": "husky",
-    "prettier": "prettier . --write",
     "type:check": "tsc && :"
   },
   "author": "Jakub Ryłko <jrylko@apptension.com>",
