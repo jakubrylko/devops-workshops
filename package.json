@@ -5,7 +5,11 @@
   "scripts": {
     "lint": "eslint . --fix && prettier . --write",
     "prepare": "husky",
-    "type:check": "tsc && :"
+    "type:check": "tsc && :",
+    "pw:test": "playwright test --project=chromium",
+    "pw:test:ui": "playwright test --ui",
+    "pw:test:headed": "playwright test --headed --project=chromium",
+    "pw:report": "playwright show-report"
   },
   "author": "Jakub Ryłko <jrylko@apptension.com>",
   "license": "ISC",
