@@ -1,3 +1,0 @@
-{
-  "*.ts": ["yarn lint", "yarn type:check"]
-}
