@@ -1,7 +1,7 @@
 name: Playwright
 run-name: Testing on branch ${{ github.ref.name }}
 on:
-  merge_group:
+  pull_request:
 jobs:
   lint:
     runs-on: ubuntu-latest
