@@ -1,5 +1,5 @@
 name: Playwright
-run-name: Testing on branch ${{ github.ref.name }}
+run-name: Testing on branch ${{ github.base_ref }}
 on:
   pull_request:
 jobs:
