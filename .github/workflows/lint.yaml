@@ -1,0 +1,20 @@
+name: Lint
+run-name: Linting on branch ${{ github.ref }}
+on:
+  pull_request:
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Install node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: Install packages
+        run: npm ci
+      - name: Run lint
+        run: npm run lint
+      - name: Run type check
+        run: npm run type:check
