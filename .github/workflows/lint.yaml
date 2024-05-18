@@ -1,5 +1,5 @@
 name: Lint
-run-name: Linting on branch ${{ github.base_ref }}
+run-name: Linting on branch ${{ github.head_ref }}
 on:
   pull_request:
 jobs:
