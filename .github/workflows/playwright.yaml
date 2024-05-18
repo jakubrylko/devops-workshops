@@ -3,7 +3,7 @@ run-name: Testing on branch ${{ github.head_ref }}
 on:
   pull_request:
 jobs:
-  lint:
+  playwright:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
