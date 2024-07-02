@@ -31,7 +31,7 @@ jobs:
   playwright:
     runs-on: ubuntu-latest
     env:
-      browser: ${{ inputs.browser }}
+      browser: ${{ inputs.browser || 'chromium' }}
     permissions:
       contents: write
     steps:
