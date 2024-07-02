@@ -1,5 +1,10 @@
 name: Playwright
-run-name: Testing on branch ${{ github.head_ref }}
+run-name: >-
+  if [ "${{ github.event_name }}" == "pull_request" ]; then
+    Testing on branch ${{ github.head_ref }}
+  else
+    Testing on main
+  fi
 
 on:
   pull_request:
