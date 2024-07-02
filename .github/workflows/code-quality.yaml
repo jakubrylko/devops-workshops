@@ -1,5 +1,5 @@
-name: Lint
-run-name: Linting on branch ${{ github.head_ref }}
+name: Code quality checks
+run-name: Checking on branch ${{ github.head_ref }}
 on:
   pull_request:
 jobs:
