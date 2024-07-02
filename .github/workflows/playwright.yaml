@@ -1,5 +1,6 @@
 name: Playwright
-run-name: Testing on branch ${{ github.ref_name }}
+run-name: Testing on branch ${{ github.head_ref }}
+
 on:
   pull_request:
   workflow_dispatch:
@@ -22,11 +23,6 @@ on:
           - 'chromium'
           - 'firefox'
           - 'webkit'
-      build:
-        description: Build
-        required: false
-        default: false
-        type: 'boolean'
 
 jobs:
   playwright:

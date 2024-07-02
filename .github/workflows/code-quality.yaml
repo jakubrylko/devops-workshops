@@ -1,7 +1,9 @@
 name: Code quality checks
 run-name: Quality checks on branch ${{ github.head_ref }}
+
 on:
   pull_request:
+
 jobs:
   lint:
     runs-on: ubuntu-latest
