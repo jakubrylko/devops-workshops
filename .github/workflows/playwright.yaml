@@ -2,9 +2,36 @@ name: Playwright
 run-name: Testing on branch ${{ github.head_ref }}
 on:
   pull_request:
+  workflow_dispatch:
+    inputs:
+      environment:
+        description: Environment
+        required: true
+        default: 'QA'
+        type: 'choice'
+        options:
+          - 'Staging'
+          - 'QA'
+      browser:
+        description: Browser
+        required: true
+        default: 'chromium'
+        type: 'choice'
+        options:
+          - 'chromium'
+          - 'firefox'
+          - 'webkit'
+      build:
+        description: Build
+        required: false
+        default: false
+        type: 'boolean'
+
 jobs:
   playwright:
     runs-on: ubuntu-latest
+    env:
+      browser: ${{ inputs.browser }}
     permissions:
       contents: write
     steps:
@@ -19,7 +46,7 @@ jobs:
       - name: Install Playwright browsers
         run: npx playwright install --with-deps
       - name: Run Playwright tests
-        run: yarn pw:test
+        run: npx playwright test --project=$browser
       - uses: actions/upload-artifact@v4
         if: ${{ !cancelled() }}
         with:
