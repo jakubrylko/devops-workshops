@@ -1,5 +1,5 @@
 name: Playwright
-run-name: Testing on branch ${{ github.ref }}
+run-name: Testing on branch ${{ github.ref_name }}
 on:
   pull_request:
   workflow_dispatch:
