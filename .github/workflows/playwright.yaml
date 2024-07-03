@@ -30,13 +30,13 @@ jobs:
     runs-on: ubuntu-latest
     env:
       device: ${{ inputs.device || 'MacBook' }}
-      browser: ${{ inputs.browser || 'chromium' }}
+      browser: ${{ inputs.browser || 'Chromium' }}
     permissions:
       contents: write
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-      - name: Install node
+      - name: Install Node
         uses: actions/setup-node@v4
         with:
           node-version: '20'
