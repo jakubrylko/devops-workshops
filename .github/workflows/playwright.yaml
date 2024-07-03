@@ -20,9 +20,9 @@ on:
         default: 'chromium'
         type: 'choice'
         options:
-          - 'chromium'
-          - 'firefox'
-          - 'webkit'
+          - 'Chromium'
+          - 'Firefox'
+          - 'Webkit'
 
 jobs:
   playwright:

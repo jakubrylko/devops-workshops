@@ -2,7 +2,7 @@ import { defineConfig, devices } from '@playwright/test'
 import type { ViewportSize } from '@playwright/test'
 
 const viewport: Record<string, ViewportSize> = {
-  MacBook: { width: 1440, height: 900 },
+  MacBook: { width: 1536, height: 900 },
   iPad: { width: 810, height: 1080 },
   iPhone: { width: 393, height: 852 }
 }
@@ -19,21 +19,21 @@ export default defineConfig({
   },
   projects: [
     {
-      name: 'chromium',
+      name: 'Chromium',
       use: {
         ...devices['Desktop Chrome'],
         viewport: viewport[process.env.DEVICE ?? 'MacBook']
       }
     },
     {
-      name: 'firefox',
+      name: 'Firefox',
       use: {
         ...devices['Desktop Firefox'],
         viewport: viewport[process.env.DEVICE ?? 'MacBook']
       }
     },
     {
-      name: 'webkit',
+      name: 'Webkit',
       use: {
         ...devices['Desktop Safari'],
         viewport: viewport[process.env.DEVICE ?? 'MacBook']
