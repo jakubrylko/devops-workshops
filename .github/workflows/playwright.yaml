@@ -17,7 +17,7 @@ on:
       browser:
         description: Browser
         required: true
-        default: 'chromium'
+        default: 'Chromium'
         type: 'choice'
         options:
           - 'Chromium'
