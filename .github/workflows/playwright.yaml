@@ -1,5 +1,4 @@
 name: Playwright tests
-run-name: Testing on ${{ github.head_ref }}
 
 on:
   pull_request:
@@ -26,6 +25,7 @@ on:
 
 jobs:
   playwright:
+    name: ${{ github.event_name == 'pull_request' && format('Testing on {0}', github.head_ref) || 'Testing on main' }}
     runs-on: ubuntu-latest
     env:
       device: ${{ inputs.device || 'MacBook' }}
