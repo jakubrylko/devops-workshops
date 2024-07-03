@@ -8,6 +8,7 @@ on:
 
 jobs:
   test-job:
+    name: Base workflow
     runs-on: ubuntu-latest
     steps:
       - run: echo "Hello, world!"
