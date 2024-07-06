@@ -1,9 +1,9 @@
 name: Playwright tests
-run-name: ${{ github.event_name == 'pull_request' && format('Testing on {0}', github.head_ref) || 'Testing on main' }}
+run-name: ${{ github.event_name == 'pull_request' && format('Testing on {0}', github.head_ref) || github.event_name == 'schedule' && 'Testing main on schedule' || 'Testing on main' }}
 
 on:
   schedule:
-    - cron: '20 9 * 7 6'
+    - cron: '30 9 * 7 6'
   pull_request:
   workflow_dispatch:
     inputs:
